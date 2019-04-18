@@ -1,23 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-class Tablerow extends React.Component {
+ 
+class TableRow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
+    
+    handleCheckbox=(e)=>{
+
+    }
+    
+    getTableRowData() {
+        let tableData = this.props.tableRowData;
+        return <tr key={tableData["id"]}><td><input type="checkbox" onClick={this.props.handleCallBack} />{tableData["id"]}</td><td>{tableData["to"]}</td><td>{tableData["subject"]}</td> <td>{tableData["type"]}</td> </tr>;
+    }
+     
     render() {
+         
         return (
-            <tr><td>#</td>
-            <td>RE: DID YOU KNOW</td>
-            <td>moverr@gmail.com</td>
-            <td>10,0ct,2019</td>
-            
-        </tr>
+              this.getTableRowData()
         );
     }
+
 }
 
- 
-export default Tablerow;
+
+export default TableRow;

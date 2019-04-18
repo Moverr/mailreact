@@ -7,6 +7,7 @@ import Mail from './Mail';
 
 let data  = [
 {
+    "id":1,
     "to":"moverr@gmail.com",
     "subject":"RE: HELLO",
     "body":"Hello , Let me know if you are good",
@@ -15,6 +16,7 @@ let data  = [
     "datecreated":"4/17/2019" 
 },
 {
+    "id":2,
     "to":"moverr@gmail.com",
     "subject":"RE: HELLO",
     "body":"Hello , Let me know if you are good",
@@ -24,6 +26,7 @@ let data  = [
 }
 
 ];
+
 ReactDOM.render(<Mail mailbox={data} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
