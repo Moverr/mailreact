@@ -7,9 +7,10 @@ class TableRow extends React.Component {
     }
 
     
-    handleCheckbox=(e)=>{
-
-    }
+     
+    handleCheckbox = (evt) => {
+		this.setState({ [evt.target.name]: evt.target.value });
+    };
     
     getTableRowData() {
         let tableData = this.props.tableRowData;
